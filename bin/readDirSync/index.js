@@ -1,12 +1,9 @@
 const fs = require("fs");
 const path = require("path");
-// const Log = require('./BaseUtils/base-log.js');
 const fileIgnore = require('./file-ignore.js');
-// const webpusherhost = require('./config/webpusher-hosts.json');
 const utils = require('../utils/utils.js');
 
 const FILE_IGNORES_ARR = fileIgnore['pusher-ignore'];
-// const BaseLog = Log().base_log;
 const TARGET_PATH = './target/target.txt';
 const ROOT_DIR = process.cwd();
 const BASE_DIR = '/' + ROOT_DIR.split('/')[ROOT_DIR.split('/').length - 1];
