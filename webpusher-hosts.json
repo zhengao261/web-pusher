@@ -1,0 +1,17 @@
+{
+	"zhengao": {
+		"receiver": "http://gzhxy-waimai-dcloud47.gzhxy.iwm.name:8888/receiver.js",
+		"root": "/home/map/odp_test/",
+    "visitPort": null
+	},
+	"zhengao2": {
+		"receiver": "http://gzhxy-waimai-dcloud47.gzhxy.iwm.name:8888/receiver1.js",
+		"root": "/home/map/odp_test/",
+    "visitPort": null
+	},
+	"zhengao3": {
+		"receiver": "http://gzhxy-waimai-dcloud47.gzhxy.iwm.name:8888/receiver2.js",
+		"root": "/home/map/odp_test/",
+    "visitPort": null
+	}
+}

@@ -1,15 +1,23 @@
 {
-  "name": "web-pusher",
+  "name": "webpusher",
   "version": "1.0.0",
-  "description": "web-pusher",
+  "description": "webpusher",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "bin": {
+    "webpusher": "./bin/webpusher.js"
+  },
+  "author": {
+    "name": "zhengao"
+  },
+  "license": "MIT",
   "dependencies": {
-    "shelljs": "^0.8.2"
+    "colors": "^1.2.4",
+    "figlet": "^1.2.0",
+    "shelljs": "^0.8.2",
+    "yargs": "^11.0.0"
   }
 }
