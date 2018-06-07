@@ -38,7 +38,7 @@ if (typeof receiver_url === 'undefined') {
 } else {
   console.log(`[info] Host: ${receiver_url} is ready`);
 }
-// 准备开始： 先清理 output.json 文件\
+// 准备开始： 先清理 output.json 文件
 var exec = require('child_process').exec;
 var cmd = 'rm -rf ./output.json';
 exec(cmd, function(error, stdout, stderr) {
@@ -46,13 +46,16 @@ exec(cmd, function(error, stdout, stderr) {
   if (error !== null) {
     console.log('exec error: ' + error);
   }
+  // 第一步 预览本地文件
   console.log("[step 1] Preview the local file".blue);
-  // todo : 如果本地 output.json 文件存在，应清除之后再执行 写文件操作 done
   var W_file = require('./readDirSync/index.js');
   new W_file(receiver_url);
   console.log("done");
+  // 第二步 通过接口上传文件到路径（服务器要先起这个服务）
   console.log("[step 2] Local will connect to server".blue);
   var F_output = require(ROOT_DIR + '/output.json');
-  var Connect = require('./server-connect.js');
+  var F_push = require(ROOT_DIR + '/bin/local-push.js');
+  F_push.Push();
+  // var Connect = require('./server-connect.js');
 });
 

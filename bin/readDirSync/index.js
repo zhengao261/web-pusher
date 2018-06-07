@@ -16,7 +16,7 @@ class W_output {
     this.writeMapFile(receiver_url);
   }
   readDirSync(path, receiver_url) {
-    // const time = `[${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}]`;    
+
     const pa = fs.readdirSync(path);
     const me = this;
     pa.forEach(function (ele, index) {
@@ -35,7 +35,7 @@ class W_output {
   writeMapFile(receiver_url) {
     const time = `[${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}]`;
     fs.appendFileSync(OUT_PUT_FILE, `[{\n`);
-    this.readDirSync(ROOT_DIR, receiver_url);
+    this.readDirSync(ROOT_DIR+'/src', receiver_url);
     fs.appendFileSync(OUT_PUT_FILE, `    "TIME_STAMP": "${new Date().getTime()}"`);
     fs.appendFileSync(OUT_PUT_FILE, `\n}]`);
   }

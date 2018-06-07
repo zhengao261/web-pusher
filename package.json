@@ -17,6 +17,7 @@
   "dependencies": {
     "colors": "^1.2.4",
     "figlet": "^1.2.0",
+    "request": "^2.85.0",
     "shelljs": "^0.8.2",
     "yargs": "^11.0.0"
   }
